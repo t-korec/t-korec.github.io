@@ -1,9 +1,8 @@
-@import 'modules/_include-media.scss';
-
+@import "modules/_include-media.scss";
 
 /* Variables */
-$space-xsmall: .25rem;
-$space-small: .5rem;
+$space-xsmall: 0.25rem;
+$space-small: 0.5rem;
 $space-medium: 1rem;
 $space-large: 2rem;
 $space-xlarge: 4rem;
@@ -11,13 +10,17 @@ $space-xlarge: 4rem;
 $xlarge-font-size: 5rem;
 
 // Breakpoints
-$breakpoints: (phone: 320px, tablet: 768px, desktop: 1024px);
+$breakpoints: (
+  phone: 320px,
+  tablet: 768px,
+  desktop: 1024px,
+);
 
 // colors
 $color-dark: #212529; // contact
 $color-default: #868e96; // color of text in body, timeline stick
 $color-background-gray: #f8f9fa; // background color in body
-$white: #FFFFFF;
+$white: #ffffff;
 $black: #000;
 $white-header: #f4f4f4; // menu backgroud
 $darker: #333; //menu icon, blocqoute text
@@ -32,7 +35,7 @@ $donut-quarter: 175;
 /* Main */
 
 * {
-  font-family: 'open sans';
+  font-family: "open sans";
   margin: 0;
   padding: 0;
 }
@@ -44,12 +47,9 @@ html {
 
 @include media(">tablet") {
   html {
-    font-size: 17px
+    font-size: 17px;
   }
 }
-
-
-
 
 /* Typography */
 
@@ -81,9 +81,6 @@ a {
   }
 }
 
-
-
-
 /* Layout */
 
 section {
@@ -107,7 +104,7 @@ section {
   &:before,
   &:after {
     background: inherit;
-    content: '';
+    content: "";
     display: block;
     height: 50%;
     left: 0;
@@ -157,8 +154,26 @@ section {
   text-decoration: none;
 }
 
-/* ----------------- Components ----------------- */
+.adhj {
+  display: flex;
+  text-align: start;
+}
 
+.pb10 {
+  padding-bottom: 10px;
+}
+
+.pb50 {
+  padding-bottom: 50px;
+}
+.flexColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  text-align: start;
+}
+
+/* ----------------- Components ----------------- */
 
 /* scrollbar */
 body::-webkit-scrollbar {
@@ -173,14 +188,10 @@ body::-webkit-scrollbar-thumb {
   outline: 1px solid slategrey;
 }
 
-
-
-
 /* header - Navbar */
-
 .header {
   background-color: $white;
-  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .1);
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
   position: fixed;
   width: 100%;
   z-index: 3;
@@ -207,7 +218,7 @@ body::-webkit-scrollbar-thumb {
   .menu {
     clear: both;
     max-height: 0;
-    transition: max-height .2s ease-out;
+    transition: max-height 0.2s ease-out;
   }
 
   .menu-btn {
@@ -217,24 +228,24 @@ body::-webkit-scrollbar-thumb {
       background-color: $white-header;
     }
 
-    &:checked~.menu {
+    &:checked ~ .menu {
       max-height: 320px;
     }
 
-    &:checked~.menu-icon .navicon {
+    &:checked ~ .menu-icon .navicon {
       background: transparent;
     }
 
-    &:checked~.menu-icon .navicon:before {
+    &:checked ~ .menu-icon .navicon:before {
       transform: rotate(-45deg);
     }
 
-    &:checked~.menu-icon .navicon:after {
+    &:checked ~ .menu-icon .navicon:after {
       transform: rotate(45deg);
     }
 
-    &:checked~.menu-icon:not(.steps) .navicon:before,
-    &:checked~.menu-icon:not(.steps) .navicon:after {
+    &:checked ~ .menu-icon:not(.steps) .navicon:before,
+    &:checked ~ .menu-icon:not(.steps) .navicon:after {
       top: 0;
     }
   }
@@ -252,17 +263,17 @@ body::-webkit-scrollbar-thumb {
       display: block;
       height: 2px;
       position: relative;
-      transition: background .2s ease-out;
+      transition: background 0.2s ease-out;
       width: 18px;
 
       &:before,
       &:after {
         background: $darker;
-        content: '';
+        content: "";
         display: block;
         height: 100%;
         position: absolute;
-        transition: all .2s ease-out;
+        transition: all 0.2s ease-out;
         width: 100%;
       }
 
@@ -278,14 +289,11 @@ body::-webkit-scrollbar-thumb {
 }
 
 /* 48em = 768px */
-
 @media (min-width: 48em) {
-
   .header {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    ;
     align-items: center;
 
     li {
@@ -306,10 +314,6 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
-
-
-
-
 /* Section Home */
 
 section#home {
@@ -317,8 +321,21 @@ section#home {
   height: 90vh;
   padding-top: $space-xlarge;
 
-  .container {
-    text-align: left;
+  .grid-home {
+    display: grid;
+    grid-template-columns: repeat(3, 33%);
+    grid-template-rows: 90vh;
+    grid-gap: 2px;
+    align-content: center;
+    justify-content: center;
+    padding-top: $space-medium;
+    padding-bottom: $space-medium;
+    .container {
+      text-align: left;
+      grid-column-start: 2;
+      justify-self: end;
+      padding-top: 50px;
+    }
   }
 
   p {
@@ -329,14 +346,59 @@ section#home {
   }
 }
 
-
-
+section#home::after {
+  content: "";
+  background: url("img/tkorec.jpeg");
+  background-size: cover;
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  background-position: 0% 70%;
+  z-index: -1;
+}
 
 /* Professional */
 
 section#professional {
   padding-top: $space-large;
   background-color: $white;
+
+  @media screen and (min-width: 768px) {
+    .skills {
+      padding-top: 50px;
+      display: grid;
+      justify-content: center;
+      justify-items: center;
+      align-items: center;
+      grid-template-columns: repeat(2, 400px);
+      grid-template-rows: repeat(4, 100px);
+      width: 60vw;
+
+      .row-3::after {
+        content: "";
+        background-repeat: no-repeat;
+        background-image: url("img/react.svg");
+        background-size: 50px;
+        opacity: 0.5;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        background-position: 48% 49%;
+        z-index: -1;
+      }
+    }
+  }
+
+  .skills {
+    .pad {
+      padding-bottom: 30px;
+    }
+  }
 
   h2 {
     padding-bottom: $space-small;
@@ -347,15 +409,16 @@ section#professional {
     height: 100px;
   }
 
+  p {
+    text-transform: uppercase;
+    justify-self: start;
+    text-align: center;
+  }
+
   .other-skills {
     padding-top: $space-medium;
   }
 }
-
-
-
-
-
 
 /* Donuts */
 
@@ -387,7 +450,7 @@ section#professional {
   }
 }
 
-#professional>div>div.item.html>h2 {
+#professional > div > div.item.html > h2 {
   width: 40px;
   line-height: 15px;
   padding-left: 30px;
@@ -508,12 +571,6 @@ svg {
   }
 }
 
-
-
-
-
-
-
 /* Experience */
 
 section#experience {
@@ -525,7 +582,7 @@ section#experience {
   position: relative;
 
   &::before {
-    content: '';
+    content: "";
     background: $color-default;
     width: 3px;
     height: 95%;
@@ -545,7 +602,6 @@ section#experience {
 
   .timeline-left {
     text-align: right;
-
   }
 
   .timeline-right {
@@ -553,7 +609,8 @@ section#experience {
   }
 
   .img-vut {
-    background: linear-gradient(rgba(0, 0, 0, 0.219), rgba(0, 0, 0, .4)), url('img/vut-fit.jpeg') center center no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.219), rgba(0, 0, 0, 0.4)),
+      url("img/vut-fit.jpeg") center center no-repeat;
     background-size: cover;
 
     height: 200px;
@@ -569,7 +626,6 @@ section#experience {
   }
 
   &:nth-child(even) {
-
     .timeline-content {
       float: right;
 
@@ -581,12 +637,11 @@ section#experience {
   }
 
   &::after {
-    content: '';
+    content: "";
     display: block;
     clear: both;
   }
 }
-
 
 .timeline-content {
   position: relative;
@@ -600,7 +655,7 @@ section#experience {
 .timeline-img {
   width: 20px;
   height: 20px;
-  background: #3D3D3D;
+  background: #3d3d3d;
   border-radius: 50%;
   position: absolute;
   left: 50%;
@@ -613,7 +668,25 @@ section#experience {
 }
 
 .timeline-img-header {
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.568)), url('img/gcx.png') center center no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.568)),
+    url("img/gcx.png") center center no-repeat;
+  background-size: cover;
+  height: 200px;
+  position: relative;
+  margin-bottom: 20px;
+
+  h2 {
+    color: $white;
+    position: absolute;
+    bottom: 5px;
+    left: 20px;
+    padding-right: 5px;
+  }
+}
+
+.timeline-img-header-tw {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.568)),
+    url("img/teamworks3.png") center center no-repeat;
   background-size: cover;
   height: 200px;
   position: relative;
@@ -633,9 +706,7 @@ section#experience {
 }
 
 @media screen and (max-width: 768px) {
-
   .timeline {
-
     &::before {
       left: 50px;
     }
@@ -652,27 +723,19 @@ section#experience {
     }
 
     .timeline-item {
-
       &:nth-child(even) {
-
         .timeline-content {
           float: none;
-
         }
       }
-
     }
   }
-
 }
-
 
 section#education {
   padding-top: $space-large;
   background-color: $white;
 }
-
-
 
 section#personal {
   padding-top: $space-large;
@@ -715,6 +778,78 @@ section#quotes {
   justify-content: space-between;
   background-color: $white;
 
+  /* The slider: */
+  .slider {
+    margin-right: 40px;
+    margin-left: 40px;
+    max-width: 90%;
+    display: flex;
+    /* The position of the element is set relative to its original position: */
+    position: relative;
+    /* Center horizontally: */
+    /*     margin: auto;
+    height: auto; */
+  }
+  /* The picture is scaled in relation to the parent element: */
+  .slider .item img {
+    /* The element is resized to fill the block and maintain proportions: */
+    object-fit: cover;
+    max-width: 900px;
+    height: auto;
+    width: 100%; /* ie8 */
+
+    border-left-color: #000;
+    border-left-width: 40px;
+    border-right-color: #000;
+    border-right-width: 40px;
+    border-style: none solid none solid;
+    border-radius: 10px;
+  }
+  /* Back and forward buttons: */
+  .slider .previous,
+  .slider .next {
+    user-select: none;
+    /* Adds an icon to the cursor when it is over the button: */
+    cursor: pointer;
+    /* The position of the element is set relative to the borders of the browser: */
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    /* Styling the buttons themselves: */
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    /* Background fading on hover: */
+    transition: 0.6s ease;
+    /* Rounding the borders: */
+    border-radius: 0 3px 3px 0;
+  }
+  .slider .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  /* When you hover over the buttons, add the background of the buttons: */
+  .slider .previous:hover,
+  .slider .next:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  /* Slide animation: */
+  .slider .item {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  @keyframes fade {
+    /* Set and change the transparency: */
+    from {
+      opacity: 0.4;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
   h2 {
     padding-bottom: $space-medium;
   }
@@ -752,24 +887,23 @@ section#quotes {
 
   @-webkit-keyframes fade {
     from {
-      opacity: .4
+      opacity: 0.4;
     }
 
     to {
-      opacity: 1
+      opacity: 1;
     }
   }
 
   @keyframes fade {
     from {
-      opacity: .4
+      opacity: 0.4;
     }
 
     to {
-      opacity: 1
+      opacity: 1;
     }
   }
-
 }
 
 blockquote {
@@ -777,7 +911,7 @@ blockquote {
   border-radius: 10px;
   color: $darker;
   text-align: left;
-  transition-duration: .3s;
+  transition-duration: 0.3s;
 
   span.author {
     position: relative;
@@ -788,20 +922,18 @@ blockquote {
   }
 }
 
-
 section#contact {
   background-color: $color-dark;
   color: whitesmoke;
   padding-top: $space-large;
-  height: 20vh;
-  a{
+  height: 15vh;
+  a {
     color: $white;
-    &:hover{
+    &:hover {
       color: $blue-link;
     }
   }
 }
-
 
 footer {
   display: flex;

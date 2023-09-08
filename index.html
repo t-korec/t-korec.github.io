@@ -8,183 +8,80 @@
     <title>TK - Curriculum vitae</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> 
-    
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 </head>
 
 <body>
 
     <header class="header">
-        <a href="https://tomaskorec.000webhostapp.com" class="logo">T</a>
+        <a href="https://t-korec.github.io/" class="logo">T</a>
         <input class="menu-btn" type="checkbox" id="menu-btn" />
         <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
 
-        <ul class="menu">
+        <ul class="menu" >
             <li><a href="#home">Home</a></li>
-            <li><a href="#professional">Professional</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#education">Education</a></li>
+            <li><a href="#professional">Skills</a></li>
+            <li><a href="#experience">Timeline</a></li>
+            <li><a href="#quotes">Portfolio</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </header>
 
-    <section id="home" class="flex">
-        <div class="container">
-            <h1>I<span class="special-letter">'</span>m
-                Tomáš Korec<span class="special-letter">.</span></h1>
-            <p>Developer</p>
+    <section id="home">
+        <div class="grid-home">
+            <div class="container">
+                <h1>I<span class="special-letter">'</span>m
+                    Tomáš Korec<span class="special-letter">.</span></h1>
+                <p>Developer</p>
+            </div>
+
+            <div class="about-me"> </div>
+
         </div>
     </section>
 
     <section id="professional" class="angled flex">
-        <h2>01 professional</h2>
-        <p>my knowledge level in software</p>
-        <div class="donuts">
-            <div class="item rust">
-                <h2>Rust</h2>
-                <svg width="100" height="100">
-                    <g>
-                        <circle r="40" cy="50" cx="50" stroke-width="5" stroke="#f2f2f2" fill="none" />
-                        <circle class="circle_animation" r="40" cy="50" cx="50" stroke-width="5" stroke="#3D3D3D"
-                            fill="none" />
-                    </g>
-                </svg>
-            </div>
-            <div class="item c">
-                <h2>C / C++</h2>
-                <svg width="100" height="100">
-                    <g>
-                        <circle r="40" cy="50" cx="50" stroke-width="5" stroke="#f2f2f2" fill="none" />
-                        <circle class="circle_animation" r="40" cy="50" cx="50" stroke-width="5" stroke="#3D3D3D"
-                            fill="none" />
-                    </g>
-                </svg>
-            </div>
-            <div class="item bash">
-                <h2>Bash</h2>
-                <svg width="100" height="100">
-                    <g>
-                        <circle r="40" cy="50" cx="50" stroke-width="5" stroke="#f2f2f2" fill="none" />
-                        <circle class="circle_animation" r="40" cy="50" cx="50" stroke-width="5" stroke="#3D3D3D"
-                            fill="none" />
-                    </g>
-                </svg>
-            </div>
-            <div class="item sql">
-                <h2>SQL</h2>
-                <svg width="100" height="100">
-                    <g>
-                        <circle r="40" cy="50" cx="50" stroke-width="5" stroke="#f2f2f2" fill="none" />
-                        <circle class="circle_animation" r="40" cy="50" cx="50" stroke-width="5" stroke="#3D3D3D"
-                            fill="none" />
-                    </g>
-                </svg>
-            </div>
-            <div class="item html">
-                <h2>HTML & CSS</h2>
-                <svg width="100" height="100">
-                    <g>
-                        <circle r="40" cy="50" cx="50" stroke-width="5" stroke="#f2f2f2" fill="none" />
-                        <circle class="circle_animation" r="40" cy="50" cx="50" stroke-width="5" stroke="#3D3D3D"
-                            fill="none" />
-                    </g>
-                </svg>
-            </div>
+        <h2>01 Skills</h2>
+        <div class="pb10"></div>
+        <div>
 
-            <div class="item python">
-                <h2>Python</h2>
-                <svg width="100" height="100">
-                    <g>
-                        <circle r="40" cy="50" cx="50" stroke-width="5" stroke="#f2f2f2" fill="none" />
-                        <circle class="circle_animation" r="40" cy="50" cx="50" stroke-width="5" stroke="#3D3D3D"
-                            fill="none" />
-                    </g>
-                </svg>
+            <div class="flexColumn">
+                <p class="pb10">Actively working with:</p>
+                <div class="adhj">
+                    <ul>
+                        <li> React.js | React Native | React Router | GraphQL/Apollo | FC & Hooks </li>
+                        <li> Styled Components | Tailwind | antD | RadixUI | Visx </li>
+                        <li> HTML5 | CSS3 | JavaScript | ES6+ | Typescript</li>
+                        <li> Jest unit testing </li>
+                        <li> Git | GitHub | GitLab</li>
+                        <li> Docker Containers | docker-compose</li>
+                        <li> Responsive Design | Cross-browser Compatibility</li>
+                        <li> Agile Development | Scrum | Kanban</li>
+                    </ul>
+                </div>
+                <div class="pb50"></div>
+                <p class="pb10">Previously worked with:</p>
+                <div class="adhj">
+                    <ul>
+                        <li> RESTful APIs | Redux | Material UI | Cytoscape JS | Ionic JS</li>
+                        <li> Bash | SQL | Linux containers (LXC, LXD) | Virtualbox</li>
+                        <li> Cypress e2e </li>
+                    </ul>
+                </div>
             </div>
         </div>
-        <p>other skills<p>
-        <div class="other-skills grid">
-                    <img src="img/linux-100px.png" alt="Linux">
-                    <img src="img/pull-request-100px.png" alt="Git">
-                    <img src="img/gitlab.svg" alt="Gitlab">
-                    <p>Linux</p>
-                    <p>Git</p>
-                    <p>Gitlab CI</p>
-                </div>
+
+
+
+
     </section>
 
     <section id="experience" class="flex">
 
-        <h2>02 Experience</h2>
+        <h2>02 Timeline</h2>
 
         <div class="timeline">
             <div class="container">
-
-                <div class="timeline-item">
-
-                    <div class="timeline-img"></div>
-
-                    <div class="timeline-content js--fadeInLeft timeline-left" data-aos="fade-up"
-                        data-aos-duration="3000">
-                        <div class="timeline-img-header">
-                            <h2>Quality Assurance Engineer</h2>
-                        </div>
-                        <div class="date">2018-2019</div>
-                        <h4>GREYCORTEX</h4>
-                        <p>Focused on tests automatization, bash scripting, SQL queries
-                            and Gitlab CI integration</p>
-                        <a href="https://www.greycortex.com/">More</a>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-
-                    <div class="timeline-img"></div>
-
-                    <div class="timeline-content js--fadeInRight timeline-right" data-aos="fade-up"
-                        data-aos-duration="3000">
-                        <div class="date">2019-PRESENT</div>
-                        <h2>Developer</h2>
-                        <h4>GREYCORTEX</h4>
-                        <p>C and rust Developer,
-                            focused on module development at network ids engine <a href="https://suricata-ids.org/">Suricata</a></p>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-
-                    <div class="timeline-img"></div>
-
-                    <div class="timeline-content timeline-card js--fadeInLeft timeline-left" data-aos="fade-up"
-                        data-aos-duration="3000">
-                        <h2>WHAT NEXT?</h2>
-                        <div class="date">2020-future</div>
-                        <h4>Prepare to gain new experiences</h4>
-                        <p>Hoping to fill this area with many of interesting projects!</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <section id="education" class="angled flex">
-        <h2>03 Education</h2>
-        <div class="timeline">
-            <div class="container">
-                <div class="timeline-item">
-                    <div class="timeline-img"></div>
-
-                    <div class="timeline-content js--fadeInLeft timeline-left" data-aos="fade-up"
-                        data-aos-duration="3000">
-                        <h2>Bilingual gymnasium</h2>
-                        <div class="date">2012-2017</div>
-                        <h4>Gymnázium Ludovíta Štúra Trenčín</h4>
-                        <p>Absolved bilingual gymnasium focused on French and English languages.
-                            Both level above B2 certificate</p>
-                    </div>
-                </div>
-
                 <div class="timeline-item">
 
                     <div class="timeline-img"></div>
@@ -195,18 +92,70 @@
                             <h2>Bachelor’s study</h2>
                         </div>
                         <div class="date">2017-2021</div>
-                        <h4>VUT Brno Faculty of Informatic Technology</h4>
-                        <p>Working on many projects, namely Ruby parser in C, XML interpreter in python, simple malloc implementation in C,
-                             some SQL scripts, implementing dhcpv6 relay in C/C++, small c-thread application and many others</p>
+                        <h4>VUT Brno Faculty of Informatics Technology</h4>
+                        <p>Working on many projects, namely Ruby parser in C, XML interpreter in python, simple malloc
+                            implementation in C,
+                            some SQL scripts, implementing dhcpv6 relay in C/C++, small c-thread application and many
+                            others</p>
                     </div>
 
                 </div>
+
+                <div class="timeline-item">
+
+                    <div class="timeline-img"></div>
+
+                    <div class="timeline-content js--fadeInLeft timeline-left" data-aos="fade-up"
+                        data-aos-duration="3000">
+                        <div class="timeline-img-header">
+                            <h2>Automation Engineer</h2>
+                        </div>
+                        <div class="date">2018-2019</div>
+                        <h4>GREYCORTEX</h4>
+                        <p>Focused on tests automation, bash scripting, SQL queries
+                            and Gitlab CI integration</p>
+                        <a href="https://www.greycortex.com/">About GCX</a>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+
+                    <div class="timeline-img"></div>
+
+                    <div class="timeline-content js--fadeInRight timeline-right" data-aos="fade-up"
+                        data-aos-duration="3000">
+                        <div class="date">2019-2021</div>
+                        <h2>Developer</h2>
+                        <h4>GREYCORTEX</h4>
+                        <p>Working as a full stack programmer (React, Java Spring, Postgres) and a maintainer of testing suite repository. 
+                            Product focus was on network security and thread detection.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+
+                    <div class="timeline-img"></div>
+
+                    <div class="timeline-content js--fadeInRight timeline-right" data-aos="fade-up"
+                        data-aos-duration="3000">
+                        <div class="date">2021-Now</div>
+                        <div class="timeline-img-header-tw">
+                        <h2>React Developer</h2>
+                        </div>
+                        <h4>TEAMWORKS PROJECT &#x1F49A; (under 3 Pillar)</h4>
+                        <p> I'm now part of a multi-national team (I'm cooperating with mainly US folks) of approximately 25 frontend engineers working on <a
+                                href="https://www.teamworks.com/">Teamworks</a> SPA (& react native app) helping sport universities and
+                            sport teams such as NHL, NFL to plan and manage their sports teams.</p>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
     <section id="personal" class="flex">
-        <h2>04 Personal</h2>
+        <h2>03 Personal</h2>
         <p>some of my favorites &hearts;</p>
 
         <h4>approach</h4>
@@ -214,7 +163,7 @@
         <div class="grid approach">
             <img src="img/docs.svg" alt="Idea">
             <img src="img/crystal.svg" alt="Idea">
-            <p>documetation</p>
+            <p>documetation & defined stantards</p>
             <p>code clarity</p>
             <img src="img/module.svg" alt="Idea">
             <img src="img/idea.svg" alt="Idea">
@@ -222,7 +171,7 @@
             <p>team work</p>
         </div>
 
-        <h4>ideologies</h4>
+        <h4>tech companies</h4>
         <hr />
         <div class="grid">
             <img src="img/apple-logo.svg" alt="Logo">
@@ -247,64 +196,67 @@
     </section>
 
     <section id="quotes" class="angled">
-        <h2>Quotes</h2>
+        <h2>04 Portfolio</h2>
 
-        <div class="slideshow-container">
-
-            <div class="slides fade">
-                <blockquote>"Everything should be made as simple as possible, but not simpler"
-                    <span class="author"><i>Albert Einstein</i></span></blockquote>
+        <! - Main slider block ->
+            <div class="slider">
+                <!-- The first slide -->
+                <div class="item">
+                    <img src="img/tw-new-navigation-notifications-page.png">
+                </div>
+                <!-- The second slide -->
+                <div class="item">
+                    <img src="img/tw-guest-approvals.png">
+                </div>
+                <!-- The third slide -->
+                <div class="item">
+                    <img src="img/bachelor-thesis-visualflow.png">
+                </div>
+                <!-- Arrow buttons -->
+                <a class="previous" onclick="previousSlide()">&#10094;</a>
+                <a class="next" onclick="nextSlide()">&#10095;</a>
             </div>
 
-            <div class="slides fade">
-                <blockquote>“People don't buy what you do; they buy why you do it. And what you do simply proves
-                    what you believe”
-                    <span class="author"><i>Simon Sinek</i></span></blockquote>
-            </div>
-
-            <div class="slides fade">
-                <blockquote>“Forget all the reasons why it won't work and believe the one reason why it will”
-                    <span class="author"><i>Unknown</i></span></blockquote>
-            </div>
-            <div class="slides fade">
-                <blockquote>"If you can get through doing things that you hate to do, on the other side is
-                    greatness"
-                    <span class="author"><i>David Goggins</i></span></blockquote>
-            </div>
-            <div class="slides fade">
-                <blockquote>"Working hard for something we don't care about is called stress: Working hard for
-                    something we love is called passion"<span class="author"><i>Simon Sinek</i></span></blockquote>
-            </div>
-        </div>
-        <div style="text-align:center">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-            <span class="dot" onclick="currentSlide(4)"></span>
-            <span class="dot" onclick="currentSlide(5)"></span>
-        </div>
     </section>
 
 
 
     <section id="contact">
         <h2>Contact</h2>
-        <p class="mail">tkorec.personal@protonmail.com</p>
-        <p class="linkedin"><a href="https://www.linkedin.com/in/tomas-korec5/">linkedin</a> <p>
+
+        <div style="display: flex; justify-content: center; align-items: center; gap: 15px; padding-top: 15px;">
+        <a href="https://www.linkedin.com/in/tomas-korec5/">
+            <img style="height: 37px;
+            background: white;
+            border-style: solid;
+            border-width: medium;
+            padding: 3px;" src="img/linkedin.png" alt="Logo">
+            <p>Linkedin</p>
+        </a>
+        
+        <a href="https://github.com/t-korec">
+            <img style="height: 42px;
+            background: white;
+            border-style: solid;
+            border-width: medium;" src="img/github.png" alt="Logo">
+            <p>Github</p>
+        </a>
+        </div>
     </section>
 
 
     <footer>
-        <a href="https://tomaskorec.000webhostapp.com" class="logo">T</a>
-        <p>Copyright 2020 proudly made by Tomáš Korec</p>
+        <a href="https://t-korec.github.io/" class="logo">T</a>
+        <p>Made by Tomáš Korec</p>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
     </script>
-    <script src="slider.js"></script>
+    <script src="simpleSlider.js"></script>
     <script src="highlightOnScroll.js"></script>
+
 </body>
 
 </html>
